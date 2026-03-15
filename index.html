@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> YPPK - Yayasan Pendidikan & Pelatihan Kearsipan </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+
+<body>
+    <!-- ==== NAVBAR ==== -->
+     <header class="navbar">
+      <div class="nav-left">
+        <img src="assets/images/YPPK.png" alt="YPPK Logo" class="nav-logo">
+      </div>
+
+  <nav class="nav-center" id="nav-menu">
+    <a href="#beranda" class="nav-link">Beranda</a>
+    <a href="#program" class="nav-link">Program</a>
+    <a href="#artikel" class="nav-link">Artikel</a>
+    <a href="#tentang" class="nav-link">Tentang Kami</a>
+    <a href="#kontak" class="nav-link">Kontak</a>
+
+    <div class="admin-login mobile-only">
+      <a href="https://yppk-education.com/login" class="profile-icon" target="_blank">
+        <i class="fa-solid fa-user"></i>
+      </a>
+    </div>
+  </nav>
+
+  <div class="admin-login desktop-only">
+    <a href="https://yppk-education.com/login" class="profile-icon">
+      <i class="fa-solid fa-user"></i>
+    </a>
+  </div>
+
+  <div class="hamburger" id="hamburger">☰</div>
+
+</header>
+
+     <script>
+       const hamburger = document.getElementById("hamburger");
+       const navMenu = document.getElementById("nav-menu");
+
+       hamburger.addEventListener("click", () => {
+       navMenu.classList.toggle("active");
+       });
+
+      document.querySelectorAll(".lang-toggle").forEach(toggle => {
+      toggle.addEventListener("click", (e) => {
+      e.stopPropagation();
+
+      document.querySelectorAll(".lang-toggle")
+        .forEach(t => t !== toggle && t.classList.remove("active"));
+
+      toggle.classList.toggle("active");
+    });
+   });
+
+       document.addEventListener("click", () => {
+       document.querySelectorAll(".lang-toggle")
+      .forEach(t => t.classList.remove("active"));
+      });
+     </script>
+
+     <!-- ===== HERO ===== -->
+      <section class="hero">
+        <div class="hero-content">
+          <img src="assets/images/YPPK.png" alt="ANRI" class="hero-logo">
+          <span class="hero-badge"> Terakreditasi ANRI </span>
+          <h1> Yayasan Pendidikan & Pelatihan Kearsipan </h1>
+          <p class="hero-desc"> "Membangun Sumber Daya Kearsipan yang Profesional dan Berkarakter" </p>
+
+        <div class="hero-actions">
+          <a href="#program" class="btn-rounded"> Lihat Program </a>
+          <a href="#kontak" class="btn-outline-rounded"> Hubungi Kami</a>
+        </div>
+       </div>
+      </section>
+
+      <!-- ==== TRUST ==== -->
+       <section class="trust-box">
+        <div class="container trust-grid">
+
+            <div class="trust-card">
+                <img src="assets/icon/house.gif" class="trust-icon" alt="Tahun Berdiri">
+                <h2 class="counter" data-target="2017"> 0 </h2>
+                <p> Tahun Berdiri </p>
+            </div>
+
+            <div class="trust-card">
+                 <img src="assets/icon/overpopulation.gif" class="trust-icon" alt="Tahun Peserta">
+                <h2 class="counter" data-target="16914"> 0 </h2>
+                <p> Total Peserta </p>
+            </div>
+
+            <div class="trust-card">
+                 <img src="assets/icon/discussion.gif" class="trust-icon" alt="Tahun Kegiatan">
+                <h2 class="counter" data-target="76"> 0 </h2>
+                <p> Total Kegiatan </p>
+            </div>
+        </div>
+       </section>
+
+      <!-- ==== TENTANG KAMI ==== -->
+       <section class="about" id="tentang">
+        <div class="container">
+            <img src="assets/images/P0.png" class="about-image" alt="Kegiatan YPPK">
+            <h2> Tentang Yayasan Kami </h2>
+         <div class="about-section">
+  <p class="about-desc" id="aboutDesc">
+    Yayasan Pendidikan dan Pelatihan (YPPK) merupakan lembaga yang bergerak di bidang pendidikan dan pelatihan kearsipan. 
+    Didirikan oleh para ahli kearsipan, YPPK berkomitmen membangun sumber daya manusia kearsipan yang profesional, berkarakter, dan berdaya saing global.
+  </p>
+
+  <p class="about-desc more-text" id="aboutMore">
+    Melalui berbagai program pendidikan, pelatihan, serta kegiatan pengembangan kompetensi, YPPK berupaya memberikan kontribusi nyata dalam meningkatkan kualitas pengelolaan arsip di berbagai institusi, baik pemerintah maupun swasta.
+
+    Dengan dukungan tenaga pengajar yang berpengalaman serta kurikulum yang terus diperbarui mengikuti perkembangan teknologi informasi, YPPK berkomitmen mencetak tenaga kearsipan yang kompeten, profesional, dan siap menghadapi tantangan global.
+  </p>
+
+  <button class="read-more-btn" onclick="toggleText()" id="readMoreBtn">
+    Lihat Selengkapnya
+  </button>
+</div>
+
+            <div class="vision-mission">
+                <div class="box">
+                     <img src="assets/icon/goals.gif" alt="Visi Icon" class="vm-icon">
+                    <h3> Visi: </h3>
+                    <p> Mewujudkan Sumber Daya kearsipan yang profesional dan berdaya saing. </p>
+                </div>
+
+                <div class="box">
+                     <img src="assets/icon/idea.gif" alt="Visi Icon" class="vm-icon">
+                    <h3> Misi: </h3>
+                    <p> Menyediakan pendidikan berkualitas untuk meningkatkan kemampuan kearsipan di berbagai sektor. </p>
+            </div>
+        </div>
+       </section>
+
+       <!-- ==== PROGRAM ==== -->
+        <section class="section program-section" id="program">
+          <div class="container">
+            <h2 class="section-title">Program Unggulan</h2>
+            <div class="card-grid">
+              <!-- CARD 1 -->
+               <div class="card">
+                <img src="assets/images/P1.png" alt="Pelatihan Teknis Kearsipan">
+                <div class="program-content">
+                  <h3>Pelatihan Teknis Kearsipan</h3>
+                  <p>Program peningkatan kompetensi arsiparis sesuai standar nasional.</p>
+                  <a class="program-toggle">Lihat Selengkapnya</a>
+               </div>
+
+            <div class="program-detail-box">
+              <div class="detail-card">
+              <h4><i class="fa-solid fa-circle-info"></i> Tentang Program</h4>
+              <p>Pelatihan ini dirancang untuk meningkatkan pemahaman dan keterampilan pengelolaan arsip sesuai standar nasional.</p>
+            </div>
+
+            <div class="detail-card">
+              <h4><i class="fa-solid fa-book"></i> Apa yang Dipelajari</h4>
+              <ul>
+                <li><i class="fa-solid fa-folder-open"></i> Manajemen arsip dinamis & statis</li>
+                <li><i class="fa-solid fa-list-check"></i> Penyusunan klasifikasi arsip</li>
+                <li><i class="fa-solid fa-scale-balanced"></i> Standar kearsipan nasional</li>
+                <li><i class="fa-solid fa-chalkboard-user"></i> Studi kasus & praktik</li>
+              </ul>
+            </div>
+
+            <div class="detail-card highlight">
+              <h4><i class="fa-solid fa-star"></i> Keunggulan Program</h4>
+              <ul>
+              <li><i class="fa-solid fa-user-tie"></i> Instruktur profesional</li>
+              <li><i class="fa-solid fa-layer-group"></i> Materi aplikatif</li>
+              <li><i class="fa-solid fa-certificate"></i> Sertifikat pelatihan</li>
+              <li><i class="fa-solid fa-building"></i> Fleksibel untuk instansi</li>
+              </ul>
+            </div>
+
+            <div class="price-box">
+              <span class="discount-badge">Diskon 30%</span>
+              <div class="price-old">Rp 2.100.000</div>
+              <div class="price-new">Rp 1.500.000</div>
+              <a href="https://wa.me/6281574446612" class="btn-primary">Daftar Sekarang</a>
+            </div>
+            <button class="program-collapse">Lihat Lebih Sedikit</button>
+          </div>
+        </div>
+      
+        <!-- CARD 2 -->
+         <div class="card">
+          <img src="assets/images/P4.jpg" alt="Pelatihan Online">
+          <div class="program-content">
+            <h3>Pelatihan Online</h3>
+            <p>Pelatihan fleksibel berbasis daring dengan materi terstruktur.</p>
+            <a class="program-toggle">Lihat Selengkapnya</a>
+          </div>
+          
+          <div class="program-detail-box">
+            <div class="detail-card">
+              <h4><i class="fa-solid fa-circle-info"></i> Tentang Program</h4>
+              <p>Program pelatihan online memungkinkan peserta belajar dari mana saja dengan materi yang tersusun sistematis dan mudah diakses.</p>
+            </div>
+
+            <div class="detail-card">
+              <h4><i class="fa-solid fa-book"></i> Apa yang Dipelajari</h4>
+              <ul>
+                <li><i class="fa-solid fa-video"></i> Pembelajaran berbasis video</li>
+                <li><i class="fa-solid fa-folder"></i> Modul digital</li>
+                <li><i class="fa-solid fa-comments"></i> Diskusi interaktif</li>
+                <li><i class="fa-solid fa-list-check"></i> Evaluasi pembelajaran</li>
+              </ul>
+            </div>
+
+            <div class="detail-card highlight">
+              <h4><i class="fa-solid fa-star"></i> Keunggulan Program</h4>
+              <ul>
+                <li><i class="fa-solid fa-clock"></i> Fleksibel waktu</li>
+                <li><i class="fa-solid fa-laptop"></i> Akses dari berbagai perangkat</li>
+                <li><i class="fa-solid fa-user"></i> Didampingi instruktur</li>
+                <li><i class="fa-solid fa-certificate"></i> Sertifikat pelatihan</li>
+              </ul>
+            </div>
+
+            <div class="price-box">
+              <span class="discount-badge">Diskon 30%</span>
+              <div class="price-old">Rp 2.100.000</div>
+              <div class="price-new">Rp 1.500.000</div>
+              <a href="https://wa.me/6281574446612" class="btn-primary">Daftar Sekarang</a>
+            </div>
+            
+            <button class="program-collapse">Lihat Lebih Sedikit</button>
+            </div>
+          </div>
+
+        <!-- CARD 3 -->
+        <div class="card">
+          <img src="assets/images/p33.jpg" alt="In-House Training">
+          <div class="program-content">
+            <h3>In-House Training</h3>
+            <p>Pelatihan khusus sesuai kebutuhan instansi.</p>
+            <a class="program-toggle">Lihat Selengkapnya</a>
+        </div>
+
+        <div class="program-detail-box">
+          <div class="detail-card">
+          <h4><i class="fa-solid fa-circle-info"></i> Tentang Program</h4>
+          <p>Program pelatihan yang dirancang khusus untuk kebutuhan organisasi agar peningkatan kompetensi lebih relevan dan aplikatif.</p>
+        </div>
+
+        <div class="detail-card">
+          <h4><i class="fa-solid fa-book"></i> Apa yang Dipelajari</h4>
+          <ul>
+            <li><i class="fa-solid fa-folder-open"></i> Sistem arsip instansi</li>
+            <li><i class="fa-solid fa-list-check"></i> Penyusunan SOP arsip</li>
+            <li><i class="fa-solid fa-building"></i> Pengelolaan arsip organisasi</li>
+            <li><i class="fa-solid fa-chalkboard-user"></i> Studi kasus internal</li>
+        </ul>
+        </div>
+
+        <div class="detail-card highlight">
+          <h4><i class="fa-solid fa-star"></i> Keunggulan Program</h4>
+          <ul>
+            <li><i class="fa-solid fa-user-tie"></i> Instruktur profesional</li>
+            <li><i class="fa-solid fa-layer-group"></i> Materi aplikatif</li>
+            <li><i class="fa-solid fa-building"></i> Disesuaikan instansi</li>
+            <li><i class="fa-solid fa-certificate"></i> Sertifikat pelatihan</li>
+          </ul>
+        </div>
+
+        <div class="price-box">
+           <span class="discount-badge">Diskon 30%</span>
+        <div class="price-old">Rp 2.100.000</div>
+        <div class="price-new">Rp 1.500.000</div>
+
+        <a href="https://wa.me/6281574446612" class="btn-primary">Daftar Sekarang</a>
+        </div>
+        <button class="program-collapse">Lihat Lebih Sedikit</button>
+        </div>
+      </div>
+
+        <div class="more-programs">
+        <!-- CARD 4 -->
+        <div class="card">
+
+        <img src="assets/images/P3.png">
+
+        <div class="program-content">
+          <h3>Konsultasi Kearsipan</h3>
+          <p>Pendampingan sistem dan tata kelola arsip.</p>
+          <a class="program-toggle">Lihat Selengkapnya</a>
+        </div>
+
+        <div class="program-detail-box">
+
+        <div class="detail-card">
+          <h4><i class="fa-solid fa-circle-info"></i> Tentang Program</h4>
+          <p>Layanan konsultasi profesional untuk membantu organisasi mengembangkan sistem pengelolaan arsip yang efektif.</p>
+        </div>
+
+        <div class="detail-card">
+          <h4><i class="fa-solid fa-book"></i> Apa yang Dipelajari</h4>
+          <ul>
+            <li><i class="fa-solid fa-folder-open"></i> Analisis sistem arsip</li>
+            <li><i class="fa-solid fa-list-check"></i> Penyusunan SOP arsip</li>
+            <li><i class="fa-solid fa-building"></i> Audit tata kelola arsip</li>
+            <li><i class="fa-solid fa-chalkboard-user"></i> Pendampingan implementasi</li>
+          </ul>
+        </div>
+
+        <div class="detail-card highlight">
+          <h4><i class="fa-solid fa-star"></i> Keunggulan Program</h4>
+          <ul>
+            <li><i class="fa-solid fa-user-tie"></i> Konsultan berpengalaman</li>
+            <li><i class="fa-solid fa-layer-group"></i> Pendampingan langsung</li>
+            <li><i class="fa-solid fa-building"></i> Disesuaikan kebutuhan instansi</li>
+            <li><i class="fa-solid fa-certificate"></i> Rekomendasi sistem arsip</li>
+          </ul>
+        </div>
+
+        <div class="price-box">
+          <span class="discount-badge">Diskon 30%</span>
+        <div class="price-old">Rp 2.100.000</div>
+        <div class="price-new">Rp 1.500.000</div>
+
+         <a href="https://wa.me/6281574446612" class="btn-primary">Daftar Sekarang</a>
+        </div>
+
+        <button class="program-collapse">Lihat Lebih Sedikit</button>
+        </div>
+      </div>
+
+
+        <!-- CARD 5 -->
+        <div class="card">
+          <img src="assets/images/P5.jpg">
+          
+          <div class="program-content">
+            <h3>Webinar</h3>
+            <p>Diskusi tematik bersama praktisi kearsipan.</p>
+            <a class="program-toggle">Lihat Selengkapnya</a>
+         </div>
+
+        <div class="program-detail-box">
+
+        <div class="detail-card">
+          <h4><i class="fa-solid fa-circle-info"></i> Tentang Program</h4>
+          <p>Webinar rutin yang menghadirkan praktisi dan pakar untuk membahas isu terbaru dalam pengelolaan arsip.</p>
+        </div>
+
+        <div class="detail-card">
+          <h4><i class="fa-solid fa-book"></i> Apa yang Dipelajari</h4>
+          <ul>
+            <li><i class="fa-solid fa-comments"></i> Diskusi isu kearsipan terbaru</li>
+            <li><i class="fa-solid fa-lightbulb"></i> Insight dari praktisi</li>
+            <li><i class="fa-solid fa-file-lines"></i> Studi kasus pengelolaan arsip</li>
+            <li><i class="fa-solid fa-question"></i> Sesi tanya jawab interaktif</li>
+          </ul>
+        </div>
+
+        <div class="detail-card highlight">
+          <h4><i class="fa-solid fa-star"></i> Keunggulan Program</h4>
+          <ul>
+            <li><i class="fa-solid fa-user-tie"></i> Narasumber profesional</li>
+            <li><i class="fa-solid fa-clock"></i> Durasi singkat & padat</li>
+            <li><i class="fa-solid fa-laptop"></i> Akses online dari mana saja</li>
+            <li><i class="fa-solid fa-certificate"></i> E-sertifikat peserta</li>
+          </ul>
+        </div>
+
+        <div class="price-box">
+          <span class="discount-badge">Diskon 30%</span>
+        <div class="price-old">Rp 2.100.000</div>
+        <div class="price-new">Rp 1.500.000</div>
+
+        <a href="https://wa.me/6281574446612" class="btn-primary">Daftar Sekarang</a>
+        </div>
+
+        <button class="program-collapse">Lihat Lebih Sedikit</button>
+
+        </div>
+      </div>
+
+        <!-- CARD 6 -->
+        <div class="card">
+          <img src="assets/images/P6.jpg">
+
+        <div class="program-content">
+          <h3>Sertifikasi</h3>
+          <p>Sertifikasi arsiparis bekerja sama dengan LSP.</p>
+          <a class="program-toggle">Lihat Selengkapnya</a>
+        </div>
+
+        <div class="program-detail-box">
+
+        <div class="detail-card">
+          <h4><i class="fa-solid fa-circle-info"></i> Tentang Program</h4>
+          <p>Program sertifikasi untuk mengukur kompetensi profesional di bidang kearsipan sesuai standar nasional.</p>
+        </div>
+
+        <div class="detail-card">
+          <h4><i class="fa-solid fa-book"></i> Apa yang Dipelajari</h4>
+          <ul>
+            <li><i class="fa-solid fa-scale-balanced"></i> Standar kompetensi arsiparis</li>
+            <li><i class="fa-solid fa-folder-open"></i> Pengelolaan arsip profesional</li>
+            <li><i class="fa-solid fa-list-check"></i> Simulasi uji kompetensi</li>
+            <li><i class="fa-solid fa-chalkboard-user"></i> Pendampingan persiapan sertifikasi</li>
+          </ul>
+        </div>
+
+        <div class="detail-card highlight">
+          <h4><i class="fa-solid fa-star"></i> Keunggulan Program</h4>
+            <ul>
+            <li><i class="fa-solid fa-certificate"></i> Sertifikat resmi kompetensi</li>
+            <li><i class="fa-solid fa-user-tie"></i> Asesor profesional</li>
+            <li><i class="fa-solid fa-layer-group"></i> Materi sesuai standar nasional</li>
+            <li><i class="fa-solid fa-building"></i> Diakui instansi & lembaga</li>
+            </ul>
+        </div>
+
+        <div class="price-box">
+          <span class="discount-badge">Diskon 30%</span>
+        <div class="price-old">Rp 2.100.000</div>
+        <div class="price-new">Rp 1.500.000</div>
+
+        <a href="https://wa.me/6281574446612" class="btn-primary">Daftar Sekarang</a>
+        </div>
+
+        <button class="program-collapse">Lihat Lebih Sedikit</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <div class="program-more-toggle">
+        <a id="toggleProgram">Lihat Program Lainnya</a>
+      </div>
+
+      </div>
+    </section>
+
+      <!-- ==== ARTIKEL ==== -->
+       <section class="section artikel-section" id="artikel">
+        <div class="container">
+          <h2 class="section-title">Artikel & Insight</h2>
+          <p class="section-sub">Informasi terbaru seputar dunia kearsipan, pelatihan, dan pengembangan kompetensi.</p>
+
+          <div class="artikel-grid">
+
+          <!-- ARTIKEL 1 -->
+          <article class="artikel-card">
+            <img src="assets/images/P1.png">
+            <div class="artikel-content">
+              <h3>Bimbingan Teknis Preservasi Arsip PT. PGN Mas Bersama YPPK</h3>
+              <p>Dalam upaya meningkatkan keahlian dan profesionalisme sumber daya manusia.</p>
+              <a href="artikel-detail.html" class="artikel-link">Baca Selengkapnya</a>
+            </div>
+          </article>
+
+          <!-- ARTIKEL 2 -->
+          <article class="artikel-card">
+            <img src="assets/images/P2.png">
+            <div class="artikel-content">
+              <h3>Tips Manajemen Arsip Profesional</h3>
+              <p>Strategi praktis agar pengelolaan arsip tetap rapi dan terstruktur.</p>
+              <a href="artikel-detail.html" class="artikel-link">Baca Selengkapnya</a>
+            </div>
+          </article>
+
+          <!-- ARTIKEL 3 -->
+          <article class="artikel-card">
+            <img src="assets/images/P3.png">
+            <div class="artikel-content">
+            <h3>Peran SDM Kearsipan di Instansi</h3>
+              <p>SDM arsiparis memiliki peran penting dalam menjaga validitas informasi.</p>
+              <a href="artikel-detail.html" class="artikel-link">Baca Selengkapnya</a>
+            </div>
+          </article>
+
+          <!-- CONTAINER ARTIKEL TAMBAHAN -->
+          <div class="more-artikel">
+
+          <article class="artikel-card">
+            <img src="assets/images/P4.jpg">
+            <div class="artikel-content">
+              <h3>Digitalisasi Arsip di Era Modern</h3>
+              <p>Transformasi digital membantu organisasi mengelola arsip lebih efisien.</p>
+              <a href="artikel-detail.html" class="artikel-link">Baca Selengkapnya</a>
+            </div>
+          </article>
+
+          <article class="artikel-card">
+            <img src="assets/images/P5.jpg">
+            <div class="artikel-content">
+              <h3>Strategi Pengelolaan Arsip Instansi</h3>
+              <p>Membangun sistem pengelolaan arsip yang profesional.</p>
+              <a href="artikel-detail.html" class="artikel-link">Baca Selengkapnya</a>
+            </div>
+          </article>
+
+          <article class="artikel-card">
+            <img src="assets/images/P6.jpg">
+            <div class="artikel-content">
+              <h3>Perkembangan Profesi Arsiparis</h3>
+              <p>Profesi arsiparis semakin penting dalam era informasi digital.</p>
+              <a href="artikel-detail.html" class="artikel-link">Baca Selengkapnya</a>
+          </div>
+          </article>
+
+        </div>
+      </div>
+
+          <div class="artikel-more-toggle">
+            <a id="toggleArtikel">Lihat Artikel & Insight Lainnya</a>
+          </div>
+        </div>
+      </section>
+
+        <!-- ==== AKREDITASI ==== -->
+         <section class="accreditation">
+            <div class="container">
+                <div class="accreditation-card">
+                    <img src="assets/images/ANRI.png" alt="Akreditasi ANRI" class="accreditation-icon">
+                    <h2> Akreditasi Nasional </h2>
+                    <p>  YPPK merupakan lembaga pelatihan kearsipan swasta pertama yang terakreditasi oleh Arsip Nasional Republik Indonesia (ANRI). </p>
+                <span class="badge"> SK ANRI No. 410 Tahun 2021 </span>
+                </div>
+                </div>
+         </section>
+
+         <!-- === PARTNERSHIP === -->
+          <section class="partnership">
+            <div class="container">
+              <h2 class="section-title">Our Partnerships</h2>
+
+              <div class="logo-slider">
+                <div class="logo-track">
+                  <img src="assets/img/1.png" alt="Partner 1">
+                  <img src="assets/img/2.png" alt="Partner 2">
+                  <img src="assets/img/3.png" alt="Partner 3">
+                  <img src="assets/img/4.png" alt="Partner 4">
+                  <img src="assets/img/5.png" alt="Partner 5">
+                  <img src="assets/img/6.png" alt="Partner 6">
+                  <img src="assets/img/7.png" alt="Partner 7">
+                  <img src="assets/img/8.png" alt="Partner 8">
+                  <img src="assets/img/9.png" alt="Partner 9">
+                  <img src="assets/img/10.png" alt="Partner 10">
+                  <img src="assets/img/11.png" alt="Partner 11">
+                  <img src="assets/img/12.png" alt="Partner 12">
+
+                  <!-- LOOPING -->
+                  <img src="assets/img/1.png" alt="Partner 1">
+                  <img src="assets/img/2.png" alt="Partner 2">
+                  <img src="assets/img/3.png" alt="Partner 3">
+                  <img src="assets/img/4.png" alt="Partner 4">
+                  <img src="assets/img/5.png" alt="Partner 5">
+                  <img src="assets/img/6.png" alt="Partner 6">
+                  <img src="assets/img/7.png" alt="Partner 7">
+                  <img src="assets/img/8.png" alt="Partner 8">
+                  <img src="assets/img/9.png" alt="Partner 9">
+                  <img src="assets/img/10.png" alt="Partner 10">
+                  <img src="assets/img/11.png" alt="Partner 11">
+                  <img src="assets/img/12.png" alt="Partner 12">
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+                  <!-- ==== TESTIMONI ==== -->
+                  <section class=" section testimonial-section">
+                      <div class="container">
+                          <h2 class="section-title">Testimoni Peserta</h2>
+
+                          <div class="testimonial-grid">
+                              <div class="testimonial-card">
+                                  <div class="testimonial-quote">
+                                      <p>“Saya baru pertama kali ikut pelatihan bimtek kearsipan, menurut saya materi yang saya dapatkan sangat berguna dalam pelaksanaan tugas saya.”</p>
+
+                                      <div class="testimonial-author">
+                                          <strong>Suartijah Hirto Putri</strong>
+                                          <span>Perpustakaan & Kearsipan Kab. Halmahera Tengah</span>
+                                      </div>
+                                  </div>
+
+                                  <div class="testimonial-avatar">
+                                      <img src="assets/images/-4.jpg" alt="Peserta">
+                                  </div>
+                              </div>
+
+                              <div class="testimonial-card">
+                                  <div class="testimonial-quote">
+                                      <p>“Wawasan baru terkait dengan teknologi pemberkasan arsip digital tanpa perlu klasifikasi, tanpa key word, tetapi dapat menangkap seluruh konten yang ada dalam arsip, sangat menarik.”</p>
+                                      <div class="testimonial-author">
+                                          <strong>Erni, S.ST.Ars.</strong>
+                                          <span>Poltekkes Kemenkes Banten</span>
+                                      </div>
+                                  </div>
+
+                                  <div class="testimonial-avatar">
+                                      <img src="assets/images/-04.jpg" alt="Peserta">
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </section>
+
+                  <!-- ==== CTA ==== -->
+                    <section class="cta">
+                      <div class="container">
+                          <div class="cta-box">
+                              <h2>Siap Meningkatkan Kompetensi<br>Sumber Daya Kearsipan?</h2>
+                              <p>Konsultasikan kebutuhan pelatihan Anda bersama tim YPPK</p>
+                              <a href="https://wa.me/6281574446612" class="btn-cta">Konsultasi Sekarang</a>
+                          </div>
+                      </div>
+                  </section>
+                  
+                <!-- ==== LOKASI ==== -->
+          <section class="section location-section">
+            <div class="container">
+
+              <h2 class="section-title">Lokasi Kami</h2>
+              <p class="section-subtitle">
+                Kunjungi kantor YPPK atau hubungi kami untuk informasi lebih lanjut
+              </p>
+
+              <div class="location-box">
+                <div class="location-map">
+                  <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.822304603649!2d106.81446207498983!3d-6.1545482938325655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f60a974fe1e7%3A0xb623b7a805e15ae2!2sKlinik%20Pratama%20Aisyah!5e0!3m2!1sid!2sid!4v1773091386881!5m2!1sid!2sid"
+                    allowfullscreen
+                    loading="lazy">
+                  </iframe>
+                </div>
+
+                <div class="location-info">
+                  <h3>Yayasan Pendidikan dan Pelatihan Kearsipan (YPPK)</h3>
+
+            <ul class="location-list">
+
+              <li>
+                <i class="fa-solid fa-location-dot"></i>
+                <span>
+                  Jl. Kebahagiaan No.9, Lt.3 RT.5/RW.1, Krukut,
+                  Kec. Taman Sari, Kota Jakarta Barat,
+                  DKI Jakarta 11140
+                </span>
+              </li>
+
+              <li>
+                <i class="fa-solid fa-phone"></i>
+                <span>021 - 6385 - 1760</span>
+              </li>
+
+              <li>
+                <i class="fa-brands fa-whatsapp"></i>
+                <span>0815 7444 6612</span>
+              </li>
+
+              <li>
+                <i class="fa-solid fa-envelope"></i>
+                <span>pendidikankearsipan@gmail.com</span>
+              </li>
+
+              <li>
+                <i class="fa-solid fa-envelope"></i>
+                <span>bimtekkearsipanyppk@gmail.com</span>
+              </li>
+
+            </ul>
+
+            <div class="location-actions">
+            
+            <a href="https://maps.app.goo.gl/heBGuKpZs6mcAkxD8" 
+              target="_blank" 
+              class="btn-map">
+              <i class="fa-solid fa-map-location-dot"></i>
+              Buka di Google Maps
+            </a>
+
+            <a href="https://wa.me/6281574446612" 
+              target="_blank" 
+              class="btn-wa">
+              <i class="fa-brands fa-whatsapp"></i>
+              Chat WhatsApp
+            </a>
+
+          </div>
+          </div>
+
+            </div>
+          </section>
+
+                  <!-- ==== FOOTER ==== --> 
+                  <footer class="footer" id="kontak">
+                      <div class="footer-grid">
+                          <div>
+                              <h4> YPPK </h4>
+                              <p> Yayasan Pendidikan & Pelatihan Kearsipan </p>
+                          </div>
+
+                          <div>
+                              <h4> Kontak </h4>
+                              <p> Email: pendidikankearsipan@gmail.com </p>
+                              <p> Email: bimtekkearsipanyppk@gmail.com</p>
+                              <p> Telp : 021 6385 1760 </p>
+                              <p> WhatsApp : 0815 7444 6612 </p>
+                          </div>
+
+                          <div class form-column>
+                              <h4> Hubungi Kami </h4>
+                              <form class="contact-form">
+                                  <input type="text" placeholder="Nama" required />
+                                  <input type="email" placeholder="Email" required />
+                                  <textarea placeholder="Pesan"></textarea>
+                                  <button type="submit"> Kirim </button>
+                              </form>
+                          </div>
+
+                          <div class="social">
+                              <a href="https://www.instagram.com/pendidikankearsipan/"><i class="fab fa-instagram"></i></a>
+                              <a href="https://www.facebook.com/yppk.education"><i class="fab fa-facebook-f"></i></a>
+                              <a href="https://www.youtube.com/@yppkofficialchannel"><i class="fab fa-youtube"></i></a>
+                              <a href="https://api.whatsapp.com/message/2YJVQ5BLOA3QH1?autoload=1"><i class="fab fa-whatsapp"></i></a>
+                              <a href="tel:02163851760"><i class="fas fa-phone"></i></a>
+                              <a href="mailto:ipendidikankearsipan@gmail.com"><i class="fas fa-envelope"></i></a>
+                          </div>
+                        </div>
+
+                          <div class="footer-bottom">
+                              <img src="assets/images/YPPK.png" height="60">
+                              <p> © 2026 Yayasan Pendidikan & Pelatihan Kearsipan. All rights reserved. </p>
+                          </div>
+                      </div>
+                  </footer>
+
+                  <script src="js/main.js"></script>
+                  <script>
+          function toggleText() {
+
+            const moreText = document.getElementById("aboutMore");
+            const btn = document.getElementById("readMoreBtn");
+            const section = document.querySelector(".about-section");
+
+            if (moreText.style.display === "block") {
+              moreText.style.display = "none";
+              btn.textContent = "Lihat Selengkapnya";
+              section.classList.remove("expanded");
+            } else {
+              moreText.style.display = "block";
+              btn.textContent = "Lihat Lebih Sedikit";
+              section.classList.add("expanded");
+            }
+          }
+
+          document.addEventListener("DOMContentLoaded",function(){
+          document.querySelectorAll(".program-toggle").forEach(btn=>{
+          btn.addEventListener("click",function(){
+
+          const card=this.closest(".card");
+
+          document.querySelectorAll(".card.active").forEach(c=>{
+          if(c!==card){
+          c.classList.remove("active");
+          const toggle=c.querySelector(".program-toggle");
+          if(toggle) toggle.style.display="inline-block";
+          }
+          });
+
+          card.classList.add("active");
+
+          this.style.display="none";
+
+          card.scrollIntoView({behavior:"smooth",block:"center"});
+
+          });
+
+          });
+
+
+          document.querySelectorAll(".program-collapse").forEach(btn=>{
+
+          btn.addEventListener("click",function(){
+
+          const card=this.closest(".card");
+
+          card.classList.remove("active");
+
+          const toggle=card.querySelector(".program-toggle");
+
+          if(toggle) toggle.style.display="inline-block";
+
+          });
+
+          });
+
+          const toggleBtn=document.getElementById("toggleProgram");
+          const morePrograms=document.querySelector(".more-programs");
+
+          toggleBtn.addEventListener("click",function(){
+
+          morePrograms.classList.toggle("show");
+
+          if(morePrograms.classList.contains("show")){
+          toggleBtn.textContent="Lihat Lebih Sedikit";
+          }else{
+          toggleBtn.textContent="Lihat Program Lainnya";
+          }
+
+          });
+
+          });
+
+          const toggleArtikel = document.getElementById("toggleArtikel");
+          const moreArtikel = document.querySelector(".more-artikel");
+
+          toggleArtikel.addEventListener("click",function(){
+
+          moreArtikel.classList.toggle("show");
+
+          if(moreArtikel.classList.contains("show")){
+          toggleArtikel.textContent="Lihat Lebih Sedikit";
+          }else{
+          toggleArtikel.textContent="Lihat Artikel & Insight Lainnya";
+          }
+
+          });
+    </script>
+  </body>
+</html>
